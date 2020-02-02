@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block container %}
+  <div class="row">
+    <div class="col-lg-8 col-md-9 col-sm-8">
+      <div class="left-wrap">
+        <h3>INTRODUCTION</h3>
+        <p>Transcripts fusion as a result of genomic rearrangement is an important class of somatic alteration, as a cancer initiating event and as a molecular therapeutic target for specific tumors. Our Pipeline for RNA sequencing Data Analysis (PRADA) enables us to detect fusion transcripts with high confidence comprehensively. Based on integrated analysis of paired-end RNA sequencing and DNA copy number data from The Cancer Genome Atlas(TCGA), The Tumor Fusion Gene Data Portal provides a bona-fide fusion list across many tumor types.</p >
+        <img src="/static/img/Fig_1.png" style="width:100%;"/>
+        <img src="/static/img/Fig_2.png" style="width:100%;"/>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-4">
+      <div class="right-wrap">
+          <div class="static-warper">
+            <h3>Database statistics</h3>
+            <table class="table table-striped">
+                <tr>
+                  <td>Gene 149</td>
+                </tr>
+              <tr>
+                <td>FusionName 154</td>
+              </tr>
+              <tr>
+                <td>FusionType 3</td>
+              </tr>
+              <tr>
+                <td>Run 94</td>
+              </tr>
+              <tr>
+                <td>FusionDisease 54</td>
+              </tr>
+            </table>
+
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

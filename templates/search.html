@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block style%}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+{% block container %}
+<div class="row">
+    <div class="form-group col-lg-2">
+        <select class="form-control" id="select_type_gene" >
+              <option value="gene">Gene</opition>
+        </select>
+    </div>
+    <div class="form-group col-lg-10">
+    	<input type="text" class="form-control" id="input_gene" placeholder="Input Gene Symbol like : EGFR"/>
+    </div>
+
+    <div class="form-group col-lg-2">
+        <select class="form-control" id="select_type_fusion" >
+              <option value="fusion">Fusion</opition>
+        </select>
+    </div>
+    <div class="form-group col-lg-10" >
+      <input type="text" class="form-control" id="input_fusion" placeholder="Input FusionName like : EGFR--VSTM2A"/>
+    </div>
+
+    <div class="form-group col-lg-2">
+        <select class="form-control" id="select_type_tumortype" >
+              <option value="tumor">TumorType</opition>
+        </select>
+    </div>
+    <div class="form-group col-lg-10" >
+      <input type="text" class="form-control" id="input_tumortype" placeholder="Input Tumor like : LGG"/>
+    </div>
+
+    <div class="form-group col-lg-2">
+        <select class="form-control" id="select_type_run" >
+              <option value="run">Run</opition>
+        </select>
+    </div>
+    <div class="form-group col-lg-10" >
+      <input type="text" class="form-control" id="input_run" placeholder="Input SRR ID like : SRR934846"/>
+    </div>
+
+    <div class="form-group col-lg-2">
+        <select class="form-control" id="select_type_breakpoint" >
+              <option value="breakpoint">BreakPoint</opition>
+        </select>
+    </div>
+
+    <div class="form-group col-lg-3" id='chr'>
+      <input type="text" class="form-control" id="input_chr" placeholder="Input Chromtype like : chr7"/>
+    </div>
+
+    <div class="form-group col-lg-4" id='pos'>
+      <input type="text" class="form-control" id="input_pos" placeholder="Input Positon like : 55200413"/>
+    </div>
+
+    <div class="form-group col-lg-3" id='range'>
+      <input type="text" class="form-control" id="input_range" placeholder="Input Positon Range like : 1000"/>
+    </div>
+
+    <div class="form-group col-lg-1">
+    	<button id="search_button" class="btn btn-primary" onclick="query()">Search</button>
+	  </div>	
+    <div class="form-group col-lg-1">
+      <button class="btn btn-success" onclick="showExample()">example</button>
+    </div>  
+    <div class="form-group col-lg-1">
+      <button class="btn btn-link" onclick="clearAll()">clear</button>
+    </div>  
+    <div class="form-group col-lg-4" >
+      <div class="checkbox ">
+          <label>
+            <input type="checkbox" name='access' value="public" checked> Public   
+          </label>
+          <label>
+            <input type="checkbox" name='access' value="private" checked> Private   
+          </label>
+      </div>
+    </div>  
+</div>
+<div class="table-responsive">
+    <table id="search_result" class="table table-bordered table-hover text-nowrap"  >
+   	<!-- <table id="search_result" class="table table-bordered table-hover table-striped"  > -->
+   	</table>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+static{% extends "base.html" %}
+
+{% block style%}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+{% block container %}
+<div class="row">
+    <div class="form-group col-lg-2">
+        <select class="form-control" id="select_type" name='type' onchange="selectChange()">
+              <option value="gene">Gene</opition>
+              <option value="fusion">Fusion</opition>
+              <option value="tumor">TumorType</opition>
+              <option value="run">Run</opition>
+              <option value="breakpoint">BreakPoint</opition>
+        </select>
+    </div>
+    <div class="form-group col-lg-9" id='normal'>
+    	<input type="text" class="form-control" id="input" placeholder="EGFR" value="EGFR"/>
+    </div>
+
+    <div class="form-group col-lg-3" id='chr' style="display:none">
+      <input type="text" class="form-control" id="input_chr" placeholder="chr3" value="chr3"/>
+    </div>
+
+    <div class="form-group col-lg-3" id='pos' style="display:none">
+      <input type="text" class="form-control" id="input_pos" placeholder="53044946" value="53044946"/>
+    </div>
+
+    <div class="form-group col-lg-3" id='range' style="display:none">
+      <input type="text" class="form-control" id="input_range" placeholder="1000" value="1000"/>
+    </div>
+
+    <div class="form-group col-lg-1">
+    	<button id="search_button" class="btn btn-primary" onclick="query()">Search</button>
+	</div>	
+</div>
+<div class="table-responsive">
+    <table id="search_result" class="table table-bordered table-hover text-nowrap"  style="display:none">
+   	<!-- <table id="search_result" class="table table-bordered table-hover table-striped"  style="display:none"> -->
+   	</table>
+</div>
+{% endblock %}

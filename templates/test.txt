@@ -1,0 +1,46 @@
+| NA|glioma                            |
+| BRCA|NA|Adenocarcinoma|BRCA|glioma   |
+| glioma                               |
+| ESCA|NA|glioma                       |
+| LUSC|OV                              |
+| BLCA                                 |
+| NA|LGG                               |
+| LUAD                                 |
+| LGG                                  |
+| prostate cancer                      |
+| LGG|NA|Astrocytoma, grade I-II|LGG|GBM|LGG|Brain Lower Grade Glioma:  TCGA|glioma  |
+| BRCA                                 |
+| |bladder cancer|glioma|lung adenocarcinoma|urothelial carcinoma|head and neck squamous cell carcinoma|non small cell lung cancer;lung cancer;adenocarcinoma|LUSC|LGG|CESC|BLCA|GBM|HNSC|urinary_tract transitional_cell_carcinoma|central_nervous_system astrocytoma_Grade_IV|lung squamous_cell_carcinoma|bladder cancer|NA|Astrocytoma, grade III-IV|Transitional cell carcinoma|Astrocytoma, pilocytic/juvenile|Squamous cell carcinoma|Carcinoma, NOS|Adenocarcinoma|Astrocytoma, grade I-II|NA|BLCA|HNSC|Urinary Bladder_RT-112|Liver_Hep G2|LGG|BLCA|HNSC|STAD|KIRP|LUSC|GBM|BLCA|CESC|CESC|ESCA|GBM|GBM|HNSC|KIRP|LAML|LGG|LGG|LIHC|LUAD|LUSC|LUSC|STAD|BLCA|GBM|HNSC|LGG|Lung squamous cell carcinoma:  TCGA|Glioblastoma multiforme:  TCGA|Head and Neck squamous cell carcinoma:  TCGA|Kidney renal papillary cell carcinoma:  TCGA|Brain Lower Grade Glioma:  TCGA|Bladder Urothelial Carcinoma:  TCGA|lung_cancer|LUSC|BLCA|HNSC|CESC|LGG|GBM|glioma |
+| KIRC|NA|Adenocarcinoma|BRCA|KIRC|LIHC|KIRC                                         |
+| HNSC|NA|Squamous cell carcinoma|HNSC |
+| BRCA|KIRP                            |
+| NA|LGG|glioma                        |
+| LGG|LUSC                             |
+| ESCA|ESCA                            |
+| STAD                                 |
+| LGG|NA|Astrocytoma, grade I-II|LGG   |
+| NA|OV|glioma                         |
+| NA|Chronic myeloid leukemia, t(9;22)|glioma                                        |
+| NA                                   |
+| SARC                                 |
+| GBM|NA|NA|Astrocytoma, grade III-IV|GBM|GBM                                        |
+| NA|STAD|glioma                       |
+| LUSC|NA|Burkitt lymphoma|Squamous cell carcinoma|LUSC|LUSC                         |
+| NA|GBM|GBM|glioma                    |
+| BLCA|LIHC                            |
+| LIHC                                 |
+| CHOL|LGG                             |
+| PRAD                                 |
+| GBM|NA|Astrocytoma, grade III-IV|GBM|GBM|GBM                                       |
+| ACC                                  |
+| BRCA|NA|Adenocarcinoma|BRCA|BRCA|Breast invasive carcinoma:  TCGA|BRCA             |
+| LIHC|LIHC                            |
+| LUAD|BRCA|HNSC|NA|Adenocarcinoma|HNSC|BRCA|UCS|LUAD|glioma                         |
+| BRCA|NA|Cervical cancer|Adenocarcinoma|BRCA                                        |
+| BRCA|SKCM|NA|Malignant melanoma|Adenocarcinoma|BRCA|prostate cancer|UCS|SKCM|BRCA  |
+| GBM                                  |
+| UCEC                                 |
+| PRAD|Adenocarcinoma|PRAD             |
+| ESCA|NA|LGG                          |
+| BRCA|NA|Adenocarcinoma|BRCA|SKCM|BRCA|
+| LUSC|NA|Astrocytoma, grade III-IV|GBM|GBM|GBM|GBM                                              
