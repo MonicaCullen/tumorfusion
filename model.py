@@ -178,6 +178,60 @@ class groupId_sampleId(db.Model):
         self.groupId = groupId
         self.sampleId = sampleId
 
+
+class cosmic_gene_census_allTue(db.Model):
+    _id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    gene_symbol = db.Column(db.String(10))
+    name = db.Column(db.String(1000))
+    entrez_geneid = db.Column(db.String(10))
+    genome_location = db.Column(db.String(100))
+    tier = db.Column(db.String(10))
+    hallmark = db.Column(db.String(10))
+    chr_band = db.Column(db.String(10))
+    somatic = db.Column(db.String(10))
+    germline = db.Column(db.String(10))
+    tumour_types_somatic = db.Column(db.String(1000))
+    tumour_types_germline = db.Column(db.String(100))
+    cancer_syndrome = db.Column(db.String(100))
+    tissue_type = db.Column(db.String(100))
+    molecular_genetics = db.Column(db.String(10))
+    role_in_cancer = db.Column(db.String(100))
+    mutation_types = db.Column(db.String(100))
+    translocation_partner = db.Column(db.String(1000))
+    other_germline_mut = db.Column(db.String(10))
+    other_syndrome = db.Column(db.String(1000))
+    synonyms = db.Column(db.String(1000))
+
+    __tablename__ = "cosmic_gene_census_allTue"
+
+    def __init__(self,gene_symbol, name, entrez_geneid, genome_location, 
+                tier, hallmark, chr_band, somatic, germline, tumour_types_somatic, 
+                tumour_types_germline, cancer_syndrome, tissue_type, molecular_genetics, 
+                role_in_cancer, mutation_types, translocation_partner, other_germline_mut, 
+                other_syndrome, synonyms)
+
+    self.gene_symbol = gene_symbol
+    self.gene_symbol = gene_symbol
+    self.name = name
+    self.entrez_geneid = entrez_geneid
+    self.genome_location = genome_location
+    self.tier = tier
+    self.hallmark = hallmark
+    self.chr_band = chr_band
+    self.somatic = somatic
+    self.germline = germline
+    self.tumour_types_somatic = tumour_types_somatic
+    self.tumour_types_germline = tumour_types_germline
+    self.cancer_syndrome = cancer_syndrome
+    self.tissue_type = tissue_type
+    self.molecular_genetics = molecular_genetics
+    self.role_in_cancer = role_in_cancer
+    self.mutation_types = mutation_types
+    self.translocation_partner = translocation_partner
+    self.other_germline_mut = other_germline_mut
+    self.other_syndrome = other_syndrome
+    self.synonyms = synonyms
+
 def insertUser(data):
 
     unit = userInfo(*data)
@@ -252,6 +306,31 @@ def insertGroupSample(data):
 
     db.session.commit()
 
+
+def insertCosmicGeneCensusAllTue():
+
+    filepath = os.path.join(current_path,"data","original","SRP027383_known_fusion_event.txt")
+    
+    with open(filepath) as rf:
+
+        n = 0
+
+        for line in rf:
+
+            if n != 0:
+
+                print (n)
+
+                data = sampleId +[d.strip() for d in line.split('\t')]
+
+                unit = sampleInfo(*data)
+
+                db.session.add(unit)
+
+                db.session.commit()
+
+            n += 1
+
 def main():
     # data = ["bf80decc-3a70-11ea-b387-507b9db4bad0","myhealthgene","myhealthgene","","","wky",""]
     # insertUser(data)
@@ -259,7 +338,7 @@ def main():
     # data = ["a685bb6c-3a7b-11ea-b387-507b9db4bad0","myhealthgeneGroup",""]
     # insertGroup(data)
 
-    insertSample()
+    # insertSample()
     
     # data = ["bf80decc-3a70-11ea-b387-507b9db4bad0","a685bb6c-3a7b-11ea-b387-507b9db4bad0"]
     # insertUserGroup(data)
@@ -270,5 +349,7 @@ def main():
     # data = ["a685bb6c-3a7b-11ea-b387-507b9db4bad0","94a2f18e-3a63-11ea-b387-507b9db4bad0"]
     # insertGroupSample(data)
 
+    insertCosmicGeneCensusAllTue()
+    
 if __name__ == "__main__":
     main()
